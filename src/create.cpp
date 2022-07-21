@@ -4,6 +4,14 @@
 
 size_t monotonic = 2;
 
+size_t getCount(std::PID client) {
+	IGNORE(client);
+	lock.acquire();
+	auto ret = monotonic;
+	lock.release();
+	return ret-1;
+}
+
 size_t newUser(std::PID client, std::SMID smid) {
 	if(!std::registry::has(client, "USERS_NEW"))
 		return 0;

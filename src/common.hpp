@@ -10,6 +10,7 @@ extern std::unordered_map<size_t, std::string> b;
 
 size_t getUID(std::PID client, std::SMID smid);
 bool getName(std::PID client, std::SMID smid, size_t uid);
+size_t getCount(std::PID client);
 size_t newUser(std::PID client, std::SMID smid);
 
 #endif

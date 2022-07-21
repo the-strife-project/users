@@ -12,6 +12,7 @@ extern "C" void _start() {
 
 	std::exportProcedure((void*)getUID, 1);
 	std::exportProcedure((void*)getName, 2);
+	std::exportProcedure((void*)getCount, 0);
 	std::exportProcedure((void*)newUser, 1);
 	std::enableRPC();
 	if(!std::publish("users"))
